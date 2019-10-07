@@ -24,8 +24,15 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response) {
         
-            console.log(response.hits[0].recipe.calories);
+            console.log(response.hits[0]);
             $("#calorie-card-text").text(JSON.stringify(response.hits[0].recipe.calories));
+
+            console.log(response.hits[0].recipe.healthLabels);
+            $("#healthLabels-card-text1").text(JSON.stringify(response.hits[0].recipe.healthLabels[0]));
+            $("#healthLabels-card-text2").text(JSON.stringify(response.hits[0].recipe.healthLabels[1]));
+            $("#healthLabels-card-text3").text(JSON.stringify(response.hits[0].recipe.healthLabels[2]));
+            $("#healthLabels-card-text4").text(JSON.stringify(response.hits[0].recipe.healthLabels[3]));
+            $("#healthLabels-card-text5").text(JSON.stringify(response.hits[0].recipe.healthLabels[4]));
         
         });
         

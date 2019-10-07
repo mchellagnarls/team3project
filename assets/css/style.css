@@ -1,15 +1,26 @@
 body{
-    background-color: lightcyan;
+    background-color: white;
+    font-family: helvetica;
+    font-size: 20px;
 }
 
-h1{
-    font-size: 30px;
-    text-align: center;
-    margin: 20px 20px;
-    margin-bottom: 35px;
-    color: lightcoral;
+.header {
+    background-color: #820820;
+    margin: 0;
+}
+.lead {
+    color: white;
+    font-size: 40px;
+    margin-left: 150px;
+    padding: 0px, 20px, 40px, 10px;
+
+}
+.title{
+    
+    font-size: 100px;
+    margin-bottom: 0px;
+    color: white;
     font-weight: bolder;
-    text-shadow: 15px 20px lightsalmon;
 }
 
 .card{
@@ -21,6 +32,8 @@ form{
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 40px;
+    margin-top: 0px;
+    margin: 30px;
 }
 
 
@@ -28,9 +41,15 @@ form{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 20px 0px;
+    margin: 30px;
     height: 30px;
     background-color: white;
+    font-size: 50px;
+    height: 300px;
+}
+
+.results {
+    margin: 30px;
 }
 
 .wrap-buttons{
@@ -46,8 +65,10 @@ form{
 }
 
 .btn-primary{
-    background-color: gray;
-    border: 2px solid lightgray;
+    background-color: #820820;
+    padding: 5px;
+    border: none;
+    margin: 5px;
 }
 
 
@@ -63,3 +84,25 @@ form{
 
 }
 
+.wine-section {
+    background-color: #b3596b;
+    color: white;
+    height: 500px;
+}
+
+.wine-title {
+    font-size: 60px;
+    padding: 20px;
+}
+
+.wine-subtitle {
+    margin-left: 100px;
+    margin-bottom: 80px;
+}
+
+.wines {
+    font-style: italic;
+    margin-left: 100px;
+    color: black;
+    font-size: 30px;
+}

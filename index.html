@@ -19,24 +19,25 @@
 
 <body>
 
-    <div class= "container">
+    <div class= "container-fluid p-0">
 
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Project App</h1>
-                <p class="lead">*put in a description of app*</p>
+        <div class="col-12 p-0">
+            <div class="header">
+                <h1 class="title">Pairings</h1>
+                <p class="lead">Find recipes & wine to pair with them</p>
 
+            </div></div>
+        <div class="col-12">
                     <div class="form">
                         <form>
-                            <input type="text" id="search" class="form-control" placeholder="What're you trying to make?">
+                            
+                            <input type="text" id="search" class="form-control" placeholder="Enter a dish... (e.g. tacos)">
                             <button class="btn btn-primary" id="submit-button">Search</button>
                             <button class="btn btn-primary" id="clear-results">Clear Results</button>
                         </form>
                     </div>
+        </div>
 
-                    <div class="favorited">
-                        <p>Favorites</p>
-                    </div>
             </div>
         </div>
 
@@ -68,9 +69,21 @@
                           <h5 class="card-title">Nutrition Info</h5>
                           <p class="card-text">*snippets about info*</p>
                         </div>
+        
                 </div>
+            
         </div>
     </div>
+    <div class="wine-section">
+        <p class="wine-title">Wine Pairings</p>
+        <p class="wine-subtitle">Try pairing your meal with...</p>
+        <p class="wines">Example wine</p>
+    
+    </div>
+
+    <div class="favorited">
+            <p>Favorites</p>
+        </div>
 
 <!-- <script src= "assets/javascript/questions.js"></script> -->
 <script src= "assets/javascript/app.js"></script>

@@ -31,14 +31,14 @@ $(document).ready(function() {
             $("#calorie-card-text").text(JSON.stringify(response.hits[1].recipe.calories));
 
             console.log(response.hits[0].recipe.healthLabels);
-            $("#healthLabels-card-text1").text(JSON.stringify(response.hits[1].recipe.healthLabels[1]));
+            $("#healthLabels-card-text1").text(JSON.stringify(response.hits[1].recipe.healthLabels[0]));
             $("#healthLabels-card-text2").text(JSON.stringify(response.hits[1].recipe.healthLabels[1]));
             $("#healthLabels-card-text3").text(JSON.stringify(response.hits[1].recipe.healthLabels[2]));
             $("#healthLabels-card-text4").text(JSON.stringify(response.hits[1].recipe.healthLabels[3]));
             $("#healthLabels-card-text5").text(JSON.stringify(response.hits[1].recipe.healthLabels[4]));
 
             console.log(response.hits[0].recipe.ingredientLines);
-            $("#recipe-item1").text(JSON.stringify(response.hits[1].recipe.ingredientLines[1]));
+            $("#recipe-item1").text(JSON.stringify(response.hits[1].recipe.ingredientLines[0]));
             $("#recipe-item2").text(JSON.stringify(response.hits[1].recipe.ingredientLines[1]));
             $("#recipe-item3").text(JSON.stringify(response.hits[1].recipe.ingredientLines[2]));
             $("#recipe-item4").text(JSON.stringify(response.hits[1].recipe.ingredientLines[3]));

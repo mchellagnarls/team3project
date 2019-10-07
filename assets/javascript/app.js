@@ -24,6 +24,9 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response) {
         
+            console.log(response.hits[1].recipe.label);
+            $("#recipe-title-text").text(JSON.stringify(response.hits[1].recipe.label));
+
             console.log(response.hits[1]);
             $("#calorie-card-text").text(JSON.stringify(response.hits[1].recipe.calories));
 

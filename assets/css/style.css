@@ -1,0 +1,65 @@
+body{
+    background-color: lightcyan;
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 20px;
+    margin-bottom: 35px;
+    color: lightcoral;
+    font-weight: bolder;
+    text-shadow: 15px 20px lightsalmon;
+}
+
+.card{
+    margin-bottom: 30px;
+}
+
+form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+.favorited{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    height: 30px;
+    background-color: white;
+}
+
+.wrap-buttons{
+    border: 3px solid lightsalmon;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-delete{
+    border-left: 3px solid lightsalmon;
+    border-radius: 0px;
+}
+
+.btn-primary{
+    background-color: gray;
+    border: 2px solid lightgray;
+}
+
+
+.recipe-content{
+    column-count: 3;
+    column-gap: 5px;
+
+}
+
+.nutritional-content{
+    column-count: 3;
+    column-gap: 5px;
+
+}
+

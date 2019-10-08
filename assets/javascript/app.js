@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // Event listener function that will trigger the AJAX call whenb the user clicks the submit button //
+    // Event listener function that will trigger the AJAX call when the user clicks the submit button //
     $("#submit-button").on("click", function(event) {
 
         // event.preventDefault() prevents the submit button from trying to submit a form when clicked //
@@ -31,11 +31,10 @@ $(document).ready(function() {
             // Displaying link recipe //
             console.log(response.hits[5].recipe.url);
 
-           var recipeURL = response.hits[5].recipe.url;
-           var recipeLink = $("<a>").attr("href", recipeURL);
-           recipeLink.text(recipeURL);
-           console.log(recipeLink[0]);
-           $("#recipe-link").append(recipeLink[0]);
+            var recipeURL = response.hits[5].recipe.url;
+            var recipeLink = $("<a>").attr("href", recipeURL);
+            recipeLink.text(recipeURL);
+            $("#recipe-link").append(recipeLink[0]);
 
             // Displaying recipe image //
             console.log(response.hits[5].recipe.image);
@@ -50,16 +49,20 @@ $(document).ready(function() {
 
             // Displaying recipe health labels //
             console.log(response.hits[5].recipe.healthLabels);
-            $("#healthLabels-card-text1").text(JSON.stringify(response.hits[5].recipe.healthLabels[0]));
-            $("#healthLabels-card-text2").text(JSON.stringify(response.hits[5].recipe.healthLabels[1]));
-            $("#healthLabels-card-text3").text(JSON.stringify(response.hits[5].recipe.healthLabels[2]));
-            $("#healthLabels-card-text4").text(JSON.stringify(response.hits[5].recipe.healthLabels[3]));
-            $("#healthLabels-card-text5").text(JSON.stringify(response.hits[5].recipe.healthLabels[4]));
-            $("#healthLabels-card-text6").text(JSON.stringify(response.hits[5].recipe.healthLabels[5]));
-            $("#healthLabels-card-text7").text(JSON.stringify(response.hits[5].recipe.healthLabels[6]));
-            $("#healthLabels-card-text8").text(JSON.stringify(response.hits[5].recipe.healthLabels[7]));
-            $("#healthLabels-card-text9").text(JSON.stringify(response.hits[5].recipe.healthLabels[8]));
-            $("#healthLabels-card-text10").text(JSON.stringify(response.hits[5].recipe.healthLabels[9]));
+            
+            // Variable for health labels as an array //
+            var healthLabelsArray = response.hits[5].recipe.healthLabels;
+            var healthLabelsStr = "";
+
+            // Loop to cycle through the array of health labels //
+            for (i = 0; i < healthLabelsArray.length; i++) {
+                if( i > 0 ){
+                    healthLabelsStr += ', ';
+                }
+                healthLabelsStr += healthLabelsArray[i];
+            }
+
+            $("#healthLabels-card-text").text(JSON.stringify(healthLabelsStr));
 
             // Displaying recipe ingredient lines //
             console.log(response.hits[5].recipe.ingredientLines);
@@ -78,6 +81,11 @@ $(document).ready(function() {
             $("#recipe-item13").text(JSON.stringify(response.hits[5].recipe.ingredientLines[12]));
             $("#recipe-item14").text(JSON.stringify(response.hits[5].recipe.ingredientLines[13]));
             $("#recipe-item15").text(JSON.stringify(response.hits[5].recipe.ingredientLines[14]));
+            $("#recipe-item16").text(JSON.stringify(response.hits[5].recipe.ingredientLines[15]));
+            $("#recipe-item17").text(JSON.stringify(response.hits[5].recipe.ingredientLines[16]));
+            $("#recipe-item18").text(JSON.stringify(response.hits[5].recipe.ingredientLines[17]));
+            $("#recipe-item19").text(JSON.stringify(response.hits[5].recipe.ingredientLines[18]));
+            $("#recipe-item20").text(JSON.stringify(response.hits[5].recipe.ingredientLines[19]));
         });
         
         // Function for AJAX call to retrieve Spoonacular wine pairing information //

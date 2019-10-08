@@ -1,5 +1,23 @@
 $(document).ready(function() {
 
+
+// test begin
+
+    $("#search").keyup(function(e){     
+        var str = $.trim( $(this).val() );
+        if( str != "" ) {
+          var regx = /^[A-Za-z]+$/;
+          if (!regx.test(str)) {
+            $("#searchComment").html("Letters only, no numbers");
+          }
+        }
+        else {
+            $("#searchComment").html("");
+        }
+    });
+
+// test end
+
     // Event listener function that will trigger the AJAX call whenb the user clicks the submit button //
     $("#submit-button").on("click", function(event) {
 

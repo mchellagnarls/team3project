@@ -30,7 +30,6 @@
         <div class="col-12">
                     <div class="form">
                         <form>
-                            
                             <input type="text" id="search" class="form-control" placeholder="Enter a dish... (e.g. tacos)">
                             <button class="btn btn-primary" id="submit-button">Search</button>
                             <button class="btn btn-primary" id="clear-results">Clear Results</button>
@@ -53,8 +52,8 @@
                         </div>
 
                         <div class="card-body">
-                          <h5 class="card-title">Ingredients List:</h5>
-                          <p class="card-text">Here's what you'll need:</p>
+                          <h5 class="card-text">Here's the ingredients you'll need: </h5>
+                          <hr>
                                 <ul class="recipe-list">
                                         <li id="recipe-item1">food 1</li>
                                         <li id="recipe-item2">food 2</li>
@@ -72,7 +71,16 @@
                 <div class="card nutritonal-content">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <div class="card-body">
+                        <h5 class="card-title">Recipe Image:</h5>
+                        <p id="recipe-card-image"></p>
+                    </div>
+                </div>
+
+                <div class="card nutritonal-content">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
                         <h5 class="card-title">Caloric Information:</h5>
+                        <hr>
                         <p id="calorie-card-text">*snippets about info*</p>
                     </div>
                 </div>
@@ -80,6 +88,7 @@
                 <div class="card nutritonal-content">
                     <div class="card-body">
                       <h5 class="card-title">Health Labels:</h5>
+                      <hr>
                       <p id="healthLabels-card-text1">*snippets about info*</p>
                       <p id="healthLabels-card-text2">*snippets about info*</p>
                       <p id="healthLabels-card-text3">*snippets about info*</p>
@@ -96,7 +105,9 @@
         <p class="wine-title">Wine Pairings:</p>
         <p class="wine-subtitle">Try pairing your meal with...</p>
         <p id="winecard-text1">Example wine</p>
+        <br>
         <p id="winecard-text2">Example wine</p>
+        <br>
         <p id="winecard-text3">Example wine</p>
     </div>
     </div>

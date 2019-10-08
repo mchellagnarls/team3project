@@ -36,6 +36,14 @@ form{
     margin: 30px;
 }
 
+#recipe-title-text{
+    color: #820820;
+}
+
+.card-title{
+    color: #820820;
+}
+
 
 .favorited{
     display: flex;
@@ -46,6 +54,7 @@ form{
     background-color: white;
     font-size: 50px;
     height: 300px;
+    color: #820820;
 }
 
 .results {

@@ -30,11 +30,12 @@ $(document).ready(function() {
 
             // Displaying link recipe //
             console.log(response.hits[5].recipe.url);
-            $("#recipe-link").text(JSON.stringify(response.hits[5].recipe.url));
 
-           //var recipeURL = response.hits[5].recipe.url;
-           //var recipeLink = $("<a>").attr("href", recipeURL);
-           //$("#recipe-link").append(recipeLink);
+           var recipeURL = response.hits[5].recipe.url;
+           var recipeLink = $("<a>").attr("href", recipeURL);
+           recipeLink.text(recipeURL);
+           console.log(recipeLink[0]);
+           $("#recipe-link").append(recipeLink[0]);
 
             // Displaying recipe image //
             console.log(response.hits[5].recipe.image);

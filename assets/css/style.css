@@ -127,11 +127,17 @@ form{
 #favDish{
     margin-left:30px;
     line-height:50px;
+    color: white;
     
 }
 .fav-item{
-    border:3px solid rgb(107, 26, 26);
+    border-radius: 10px;
+    border:2px solid rgb(53, 40, 40);
     padding:5px;
+    background-color: rgb(212, 119, 119);
+    
+
+    
 }
 
 a:hover{

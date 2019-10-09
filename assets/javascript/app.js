@@ -135,7 +135,7 @@ $(document).ready(function() {
     });
 
     function updateFavorites(){
-        if( favoritesArr && favoritesArr.length ){
+            if( favoritesArr){
             console.log('here');
             $("#favDish").empty();
             var recipeList = $("<ul>");
@@ -147,12 +147,22 @@ $(document).ready(function() {
                 itemTag.addClass('fav-item');
                 listItem.append(itemTag);
                 recipeList.append(listItem);
+                var favDishClose = $('<button>').text('X').addClass('remove').attr('food', favoritesArr[i]);
+			    listItem.append(favDishClose);
             }
                 console.log(recipeList);
                 $("#favDish").append(recipeList);
         }
     }
-
+    $(document).on('click', '.remove', function() {
+        var searchTerm = $(this).attr("food");
+        favoritesArr = JSON.parse(localStorage.getItem("dish"));
+        var index = favoritesArr.indexOf(searchTerm)
+        favoritesArr.splice(index,1);
+        localStorage.setItem("dish",JSON.stringify(favoritesArr));
+        updateFavorites();
+    });
+   
     // Process click to a favorite item
     $(document).on("click", ".fav-item", function(){
         console.log('favorite clicked');

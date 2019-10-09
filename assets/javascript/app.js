@@ -25,6 +25,10 @@ $(document).ready(function() {
 
          $(".results").show();
          $("#recipe-card-image").empty();
+         $("#recipe-link").empty();
+         $("#winecard-text1").text("Couldn;t find any wines for this dish.")
+         $("#winecard-text2").empty();
+         $("#winecard-text3").empty();
  
          // Initial variables for our two APIs with their respective keys and/or app IDs //
          var edamamKeyAPI = "9d5b06c6d10c6620183573ad18113312";
@@ -48,7 +52,11 @@ $(document).ready(function() {
              console.log(response.hits[5].recipe.url);
  
              var recipeURL = response.hits[5].recipe.url;
-             var recipeLink = $("<a>").attr("href", recipeURL);
+             var recipeLink = $("<a>").attr({
+                 "href": recipeURL,
+                 target: "_blank"
+             });
+
              recipeLink.text(recipeURL);
              $("#recipe-link").append(recipeLink[0]);
  

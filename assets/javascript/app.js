@@ -153,46 +153,7 @@ $(document).ready(function() {
                 itemTag.addClass('fav-item');
                 listItem.append(itemTag);
                 recipeList.append(listItem);
-            // Displaying recipe title //
-            console.log(response.hits[5].recipe.label);
-            $("#recipe-title-text").text(response.hits[5].recipe.label);
 
-            // Displaying link recipe //
-            console.log(response.hits[5].recipe.url);
-
-            var recipeURL = response.hits[5].recipe.url;
-            var recipeLink = $("<a>").attr({
-                href: recipeURL,
-                target: "_blank"
-             });
-           
-            recipeLink.text(recipeURL);
-            $("#recipe-link").append(recipeLink[0]);
-
-            // Displaying recipe image //
-            console.log(response.hits[5].recipe.image);
-
-            var imgURL = response.hits[5].recipe.image;
-            var image = $("<img>").attr("src", imgURL);
-            $("#recipe-card-image").append(image);
-
-            // Displaying receipe calories //
-            console.log(response.hits[5]);
-            $("#calorie-card-text").text(response.hits[5].recipe.calories);
-
-            // Displaying recipe health labels //
-            console.log(response.hits[5].recipe.healthLabels);
-          
-            // Variable for health labels as an array //
-            var healthLabelsArray = response.hits[5].recipe.healthLabels;
-            var healthLabelsStr = "";
-
-            // Loop to cycle through the array of health labels //
-            for (i = 0; i < healthLabelsArray.length; i++) {
-                if( i > 0 ){
-                    healthLabelsStr += ', ';
-                }
-                healthLabelsStr += healthLabelsArray[i];
             }
                 console.log(recipeList);
                 $("#favDish").append(recipeList);
@@ -206,44 +167,7 @@ $(document).ready(function() {
         var favText = $(this).text().toLowerCase();
         getItemFromAPI(favText);
     });
-            $("#healthLabels-card-text").text(JSON.stringify(healthLabelsStr));
-
-            // Displaying recipe ingredient lines //
-            console.log(response.hits[5].recipe.ingredientLines);
-            $("#recipe-item1").text(response.hits[5].recipe.ingredientLines[0]);
-            $("#recipe-item2").text(response.hits[5].recipe.ingredientLines[1]);
-            $("#recipe-item3").text(response.hits[5].recipe.ingredientLines[2]);
-            $("#recipe-item4").text(response.hits[5].recipe.ingredientLines[3]);
-            $("#recipe-item5").text(response.hits[5].recipe.ingredientLines[4]);
-            $("#recipe-item6").text(response.hits[5].recipe.ingredientLines[5]);
-            $("#recipe-item7").text(response.hits[5].recipe.ingredientLines[6]);
-            $("#recipe-item8").text(response.hits[5].recipe.ingredientLines[7]);
-            $("#recipe-item9").text(response.hits[5].recipe.ingredientLines[8]);
-            $("#recipe-item10").text(response.hits[5].recipe.ingredientLines[9]);
-            $("#recipe-item11").text(response.hits[5].recipe.ingredientLines[10]);
-            $("#recipe-item12").text(response.hits[5].recipe.ingredientLines[11]);
-            $("#recipe-item13").text(response.hits[5].recipe.ingredientLines[12]);
-            $("#recipe-item14").text(response.hits[5].recipe.ingredientLines[13]);
-            $("#recipe-item15").text(response.hits[5].recipe.ingredientLines[14]);
-            $("#recipe-item16").text(response.hits[5].recipe.ingredientLines[15]);
-            $("#recipe-item17").text(response.hits[5].recipe.ingredientLines[16]);
-            $("#recipe-item18").text(response.hits[5].recipe.ingredientLines[17]);
-            $("#recipe-item19").text(response.hits[5].recipe.ingredientLines[18]);
-            $("#recipe-item20").text(response.hits[5].recipe.ingredientLines[19]);
-
-        });
-        
-        // Function for AJAX call to retrieve Spoonacular wine pairing information //
-        $.ajax({
-            url: spoonQueryURL,
-            method: "GET"
-        }).then(function(response) {
-        
-            // Displaying preferred wine pairings //
-            console.log("wines " + response.pairedWines);
-            $("#winecard-text1").text(response.pairedWines[0]);
-            $("#winecard-text2").text(response.pairedWines[1]);
-            $("#winecard-text3").text(response.pairedWines[2]);
+   
 
     $("#fav").on("click", function(event) {
         event.preventDefault();

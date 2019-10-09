@@ -14,7 +14,8 @@ body{
     font-size: 40px;
     margin-left: 150px;
     padding: 0px, 20px, 40px, 10px;
-    font-style: oblique;
+
+    text-align: center;
 }
 .title{
     
@@ -22,6 +23,7 @@ body{
     margin-bottom: 0px;
     color: white;
     font-weight: bolder;
+    text-align: center;
 }
 
 .card{

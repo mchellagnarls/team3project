@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    var favoritesArr = JSON.parse(localStorage.getItem("dish"));
+
 
     $("#search").keyup(function(e){     
         var str = $.trim( $(this).val() );
@@ -60,10 +62,12 @@ $(document).ready(function() {
             var imgURL = response.hits[5].recipe.image;
             var image = $("<img>").attr("src", imgURL);
             $("#recipe-card-image").append(image);
-
+            
             // Displaying receipe calories //
             console.log(response.hits[5]);
-            $("#calorie-card-text").text(response.hits[5].recipe.calories);
+            var calorie=JSON.stringify(response.hits[5].recipe.calories);
+            var calNum = Math.round(calorie);
+             $("#calorie-card-text").text(calNum);
 
             // Displaying recipe health labels //
             console.log(response.hits[5].recipe.healthLabels);
@@ -125,7 +129,35 @@ $(document).ready(function() {
         
 
     });
+        function updateFavorites(){
+            if( favoritesArr && favoritesArr.length ){
+                console.log('here');
+                $("#favDish").empty();
+                var recipeList = $("<ul>");
+            
+            for (var i = 0; i < favoritesArr.length; i++){
+                var listItem = $("<li>");
+                listItem.text(favoritesArr[i]);
+                recipeList.append(listItem);
+            }
+                console.log(recipeList);
+                $("#favDish").append(recipeList);
+        }
+    }
 
+        $("#fav").on("click", function(event) {
+        event.preventDefault();
+        recipeSearch = $("#submit-button").val();
+        favoritesArr.push(recipeSearch);    
+        
+        
+        localStorage.setItem("dish", JSON.stringify(favoritesArr));
+        updateFavorites();
+
+        
+    });
+
+        updateFavorites();
 
 
 });

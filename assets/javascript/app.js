@@ -118,23 +118,6 @@ $(document).ready(function() {
 
     // Event listener function that will trigger the AJAX call whenb the user clicks the submit button //
     $("#submit-button").on("click", function(event) {
-
-        // event.preventDefault() prevents the submit button from trying to submit a form when clicked //
-        event.preventDefault();
-
-        $(".results").show();
-        $("#recipe-card-image").empty();
-        $("#winecard-text1").text("Couldn't find any wines for this dish.")
-        $("#winecard-text2").empty();
-        $("#winecard-text3").empty();
-        $("#recipe-link").empty();
-        
-
-        // Initial variables for our two APIs with their respective keys and/or app IDs //
-        var edamamKeyAPI = "9d5b06c6d10c6620183573ad18113312";
-        var edamamId = "a2c8e6b6";
-        var spoonacularKeyAPI = "7aaa8c8c6c4743e8abe149221960621c";
-        
         // Variable that connects the user search input to complete the API query URL below //
         var recipeSearch = $("#search").val();
         getItemFromAPI(recipeSearch);
@@ -153,13 +136,11 @@ $(document).ready(function() {
                 itemTag.addClass('fav-item');
                 listItem.append(itemTag);
                 recipeList.append(listItem);
-
             }
                 console.log(recipeList);
                 $("#favDish").append(recipeList);
         }
     }
-
 
     // Process click to a favorite item
     $(document).on("click", ".fav-item", function(){
@@ -167,13 +148,12 @@ $(document).ready(function() {
         var favText = $(this).text().toLowerCase();
         getItemFromAPI(favText);
     });
-   
 
     $("#fav").on("click", function(event) {
         event.preventDefault();
-        recipeSearch = $("#submit-button").val();
+        recipeSearch = $("#search").val();
         favoritesArr.push(recipeSearch);    
-        
+        console.log(recipeSearch);
         
         localStorage.setItem("dish", JSON.stringify(favoritesArr));
         updateFavorites();

@@ -14,7 +14,7 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet"> -->
     <!-- <script src="https://kit.fontawesome.com/2d0ca01e24.js" crossorigin="anonymous"></script> -->
     <script type= "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body>
@@ -23,8 +23,8 @@
 
         <div class="col-12 p-0">
             <div class="header">
-                <h1 class="title">Pairings</h1>
-                <p class="lead">Find recipes & wine to pair with them</p>
+                <h1 class="title animated fadeInDown">Pairings</h1>
+                <p class="lead animated fadeInUp delay-1s">Find recipes & wine to pair with them</p>
 
             </div></div>
         <div class="col-12">
@@ -34,6 +34,9 @@
                             <button class="btn btn-primary" id="submit-button">Search</button>
                             <button class="btn btn-primary" id="clear-results">Clear Results</button>
                         </form>
+                    </div>
+                    <div>
+                        <p id="searchComment"></p>
                     </div>
         </div>
 
@@ -115,6 +118,7 @@
     </div>
 
     <div class="wine-section">
+        <div class="animated fadeInUp delay-2s">
         <p class="wine-title">Wine Pairings:</p>
         <p class="wine-subtitle">Try pairing your meal with...</p>
         <p id="winecard-text1">Example wine</p>
@@ -123,6 +127,8 @@
         <br>
         <p id="winecard-text3">Example wine</p>
     </div>
+    </div>
+
 
     <div class="favorited">
             <p>Favorites</p>

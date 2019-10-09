@@ -26,7 +26,7 @@ $(document).ready(function() {
          $(".results").show();
          $("#recipe-card-image").empty();
          $("#recipe-link").empty();
-         $("#winecard-text1").text("Couldn;t find any wines for this dish.")
+         $("#winecard-text1").text("Couldn't find any wines for this dish.");
          $("#winecard-text2").empty();
          $("#winecard-text3").empty();
  

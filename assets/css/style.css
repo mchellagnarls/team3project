@@ -127,4 +127,15 @@ form{
 #favDish{
     margin-left:30px;
     line-height:50px;
+    
+}
+.fav-item{
+    border:3px solid rgb(107, 26, 26);
+    padding:5px;
+}
+
+a:hover{
+font-size:40px;
+font-weight: bold;
+
 }

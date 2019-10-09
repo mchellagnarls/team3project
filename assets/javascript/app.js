@@ -44,7 +44,7 @@ $(document).ready(function() {
         
             // Displaying recipe title //
             console.log(response.hits[5].recipe.label);
-            $("#recipe-title-text").text(JSON.stringify(response.hits[5].recipe.label));
+            $("#recipe-title-text").text(response.hits[5].recipe.label);
 
             // Displaying link recipe //
             console.log(response.hits[5].recipe.url);
@@ -64,38 +64,38 @@ $(document).ready(function() {
 
             // Displaying receipe calories //
             console.log(response.hits[5]);
-            $("#calorie-card-text").text(JSON.stringify(response.hits[5].recipe.calories));
+            $("#calorie-card-text").text(response.hits[5].recipe.calories);
 
             // Displaying recipe health labels //
             console.log(response.hits[5].recipe.healthLabels);
-            $("#healthLabels-card-text1").text(JSON.stringify(response.hits[5].recipe.healthLabels[0]));
-            $("#healthLabels-card-text2").text(JSON.stringify(response.hits[5].recipe.healthLabels[1]));
-            $("#healthLabels-card-text3").text(JSON.stringify(response.hits[5].recipe.healthLabels[2]));
-            $("#healthLabels-card-text4").text(JSON.stringify(response.hits[5].recipe.healthLabels[3]));
-            $("#healthLabels-card-text5").text(JSON.stringify(response.hits[5].recipe.healthLabels[4]));
-            $("#healthLabels-card-text6").text(JSON.stringify(response.hits[5].recipe.healthLabels[5]));
-            $("#healthLabels-card-text7").text(JSON.stringify(response.hits[5].recipe.healthLabels[6]));
-            $("#healthLabels-card-text8").text(JSON.stringify(response.hits[5].recipe.healthLabels[7]));
-            $("#healthLabels-card-text9").text(JSON.stringify(response.hits[5].recipe.healthLabels[8]));
-            $("#healthLabels-card-text10").text(JSON.stringify(response.hits[5].recipe.healthLabels[9]));
+            $("#healthLabels-card-text1").text(response.hits[5].recipe.healthLabels[0]);
+            $("#healthLabels-card-text2").text(response.hits[5].recipe.healthLabels[1]);
+            $("#healthLabels-card-text3").text(response.hits[5].recipe.healthLabels[2]);
+            $("#healthLabels-card-text4").text(response.hits[5].recipe.healthLabels[3]);
+            $("#healthLabels-card-text5").text(response.hits[5].recipe.healthLabels[4]);
+            $("#healthLabels-card-text6").text(response.hits[5].recipe.healthLabels[5]);
+            $("#healthLabels-card-text7").text(response.hits[5].recipe.healthLabels[6]);
+            $("#healthLabels-card-text8").text(response.hits[5].recipe.healthLabels[7]);
+            $("#healthLabels-card-text9").text(response.hits[5].recipe.healthLabels[8]);
+            $("#healthLabels-card-text10").text(response.hits[5].recipe.healthLabels[9]);
 
             // Displaying recipe ingredient lines //
             console.log(response.hits[5].recipe.ingredientLines);
-            $("#recipe-item1").text(JSON.stringify(response.hits[5].recipe.ingredientLines[0]));
-            $("#recipe-item2").text(JSON.stringify(response.hits[5].recipe.ingredientLines[1]));
-            $("#recipe-item3").text(JSON.stringify(response.hits[5].recipe.ingredientLines[2]));
-            $("#recipe-item4").text(JSON.stringify(response.hits[5].recipe.ingredientLines[3]));
-            $("#recipe-item5").text(JSON.stringify(response.hits[5].recipe.ingredientLines[4]));
-            $("#recipe-item6").text(JSON.stringify(response.hits[5].recipe.ingredientLines[5]));
-            $("#recipe-item7").text(JSON.stringify(response.hits[5].recipe.ingredientLines[6]));
-            $("#recipe-item8").text(JSON.stringify(response.hits[5].recipe.ingredientLines[7]));
-            $("#recipe-item9").text(JSON.stringify(response.hits[5].recipe.ingredientLines[8]));
-            $("#recipe-item10").text(JSON.stringify(response.hits[5].recipe.ingredientLines[9]));
-            $("#recipe-item11").text(JSON.stringify(response.hits[5].recipe.ingredientLines[10]));
-            $("#recipe-item12").text(JSON.stringify(response.hits[5].recipe.ingredientLines[11]));
-            $("#recipe-item13").text(JSON.stringify(response.hits[5].recipe.ingredientLines[12]));
-            $("#recipe-item14").text(JSON.stringify(response.hits[5].recipe.ingredientLines[13]));
-            $("#recipe-item15").text(JSON.stringify(response.hits[5].recipe.ingredientLines[14]));
+            $("#recipe-item1").text(response.hits[5].recipe.ingredientLines[0]);
+            $("#recipe-item2").text(response.hits[5].recipe.ingredientLines[1]);
+            $("#recipe-item3").text(response.hits[5].recipe.ingredientLines[2]);
+            $("#recipe-item4").text(response.hits[5].recipe.ingredientLines[3]);
+            $("#recipe-item5").text(response.hits[5].recipe.ingredientLines[4]);
+            $("#recipe-item6").text(response.hits[5].recipe.ingredientLines[5]);
+            $("#recipe-item7").text(response.hits[5].recipe.ingredientLines[6]);
+            $("#recipe-item8").text(response.hits[5].recipe.ingredientLines[7]);
+            $("#recipe-item9").text(response.hits[5].recipe.ingredientLines[8]);
+            $("#recipe-item10").text(response.hits[5].recipe.ingredientLines[9]);
+            $("#recipe-item11").text(response.hits[5].recipe.ingredientLines[10]);
+            $("#recipe-item12").text(response.hits[5].recipe.ingredientLines[11]);
+            $("#recipe-item13").text(response.hits[5].recipe.ingredientLines[12]);
+            $("#recipe-item14").text(response.hits[5].recipe.ingredientLines[13]);
+            $("#recipe-item15").text(response.hits[5].recipe.ingredientLines[14]);
         });
         
         // Function for AJAX call to retrieve Spoonacular wine pairing information //
@@ -106,9 +106,9 @@ $(document).ready(function() {
         
             // Displaying preferred wine pairings //
             console.log(response.pairedWines);
-            $("#winecard-text1").text(JSON.stringify(response.pairedWines[0]));
-            $("#winecard-text2").text(JSON.stringify(response.pairedWines[1]));
-            $("#winecard-text3").text(JSON.stringify(response.pairedWines[2]));
+            $("#winecard-text1").text(response.pairedWines[0]);
+            $("#winecard-text2").text(response.pairedWines[1]);
+            $("#winecard-text3").text(response.pairedWines[2]);
 
         
         });

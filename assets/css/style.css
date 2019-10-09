@@ -7,13 +7,14 @@ body{
 .header {
     background-color: #820820;
     margin: 0;
+    font-family: 'helvetica';
 }
 .lead {
     color: white;
     font-size: 40px;
     margin-left: 150px;
     padding: 0px, 20px, 40px, 10px;
-
+    font-style: oblique;
 }
 .title{
     
@@ -102,12 +103,17 @@ form{
 .wine-title {
     font-size: 60px;
     padding: 20px;
+    font-weight: bolder;
 }
 
 .wine-subtitle {
+    font-size: 30px;
     margin-left: 100px;
     margin-bottom: 80px;
+    font-style: oblique;
+    font-weight: lighter;
 }
+
 
 .wines {
     font-style: italic;

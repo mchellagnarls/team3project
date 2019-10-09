@@ -39,7 +39,7 @@ $(document).ready(function() {
         
             // Displaying recipe title //
             console.log(response.hits[5].recipe.label);
-            $("#recipe-title-text").text(JSON.stringify(response.hits[5].recipe.label));
+            $("#recipe-title-text").text(response.hits[5].recipe.label);
 
             // Displaying link recipe //
             console.log(response.hits[5].recipe.url);
@@ -58,11 +58,11 @@ $(document).ready(function() {
 
             // Displaying receipe calories //
             console.log(response.hits[5]);
-            $("#calorie-card-text").text(JSON.stringify(response.hits[5].recipe.calories));
+            $("#calorie-card-text").text(response.hits[5].recipe.calories);
 
             // Displaying recipe health labels //
             console.log(response.hits[5].recipe.healthLabels);
-            
+          
             // Variable for health labels as an array //
             var healthLabelsArray = response.hits[5].recipe.healthLabels;
             var healthLabelsStr = "";
@@ -99,6 +99,7 @@ $(document).ready(function() {
             $("#recipe-item18").text(JSON.stringify(response.hits[5].recipe.ingredientLines[17]));
             $("#recipe-item19").text(JSON.stringify(response.hits[5].recipe.ingredientLines[18]));
             $("#recipe-item20").text(JSON.stringify(response.hits[5].recipe.ingredientLines[19]));
+
         });
         
         // Function for AJAX call to retrieve Spoonacular wine pairing information //
@@ -109,9 +110,9 @@ $(document).ready(function() {
         
             // Displaying preferred wine pairings //
             console.log(response.pairedWines);
-            $("#winecard-text1").text(JSON.stringify(response.pairedWines[0]));
-            $("#winecard-text2").text(JSON.stringify(response.pairedWines[1]));
-            $("#winecard-text3").text(JSON.stringify(response.pairedWines[2]));
+            $("#winecard-text1").text(response.pairedWines[0]);
+            $("#winecard-text2").text(response.pairedWines[1]);
+            $("#winecard-text3").text(response.pairedWines[2]);
 
         
         });

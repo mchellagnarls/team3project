@@ -45,7 +45,11 @@ $(document).ready(function() {
             console.log(response.hits[5].recipe.url);
 
             var recipeURL = response.hits[5].recipe.url;
-            var recipeLink = $("<a>").attr("href", recipeURL);
+            var recipeLink = $("<a>").attr({
+                href: recipeURL,
+                target: "_blank"
+             });
+           
             recipeLink.text(recipeURL);
             $("#recipe-link").append(recipeLink[0]);
 

@@ -23,6 +23,11 @@ $(document).ready(function() {
 
         $(".results").show();
         $("#recipe-card-image").empty();
+        $("#winecard-text1").text("Couldn't find any wines for this dish.")
+        $("#winecard-text2").empty();
+        $("#winecard-text3").empty();
+        $("#recipe-link").empty();
+        
 
         // Initial variables for our two APIs with their respective keys and/or app IDs //
         var edamamKeyAPI = "9d5b06c6d10c6620183573ad18113312";
@@ -114,7 +119,7 @@ $(document).ready(function() {
         }).then(function(response) {
         
             // Displaying preferred wine pairings //
-            console.log(response.pairedWines);
+            console.log("wines " + response.pairedWines);
             $("#winecard-text1").text(response.pairedWines[0]);
             $("#winecard-text2").text(response.pairedWines[1]);
             $("#winecard-text3").text(response.pairedWines[2]);

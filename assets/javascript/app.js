@@ -13,11 +13,15 @@ $(document).ready(function() {
         }
     });
 
+    $(".results").hide();
+
     // Event listener function that will trigger the AJAX call whenb the user clicks the submit button //
     $("#submit-button").on("click", function(event) {
 
         // event.preventDefault() prevents the submit button from trying to submit a form when clicked //
         event.preventDefault();
+
+        $(".results").show();
 
         // Initial variables for our two APIs with their respective keys and/or app IDs //
         var edamamKeyAPI = "9d5b06c6d10c6620183573ad18113312";

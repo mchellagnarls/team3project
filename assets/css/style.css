@@ -140,7 +140,7 @@ form{
     
 }
 
-a:hover{
+.fav-item:hover{
 font-size:40px;
 font-weight: bold;
 

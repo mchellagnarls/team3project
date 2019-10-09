@@ -22,6 +22,7 @@ $(document).ready(function() {
         event.preventDefault();
 
         $(".results").show();
+        $("#recipe-card-image").empty();
 
         // Initial variables for our two APIs with their respective keys and/or app IDs //
         var edamamKeyAPI = "9d5b06c6d10c6620183573ad18113312";
@@ -83,26 +84,26 @@ $(document).ready(function() {
 
             // Displaying recipe ingredient lines //
             console.log(response.hits[5].recipe.ingredientLines);
-            $("#recipe-item1").text(JSON.stringify(response.hits[5].recipe.ingredientLines[0]));
-            $("#recipe-item2").text(JSON.stringify(response.hits[5].recipe.ingredientLines[1]));
-            $("#recipe-item3").text(JSON.stringify(response.hits[5].recipe.ingredientLines[2]));
-            $("#recipe-item4").text(JSON.stringify(response.hits[5].recipe.ingredientLines[3]));
-            $("#recipe-item5").text(JSON.stringify(response.hits[5].recipe.ingredientLines[4]));
-            $("#recipe-item6").text(JSON.stringify(response.hits[5].recipe.ingredientLines[5]));
-            $("#recipe-item7").text(JSON.stringify(response.hits[5].recipe.ingredientLines[6]));
-            $("#recipe-item8").text(JSON.stringify(response.hits[5].recipe.ingredientLines[7]));
-            $("#recipe-item9").text(JSON.stringify(response.hits[5].recipe.ingredientLines[8]));
-            $("#recipe-item10").text(JSON.stringify(response.hits[5].recipe.ingredientLines[9]));
-            $("#recipe-item11").text(JSON.stringify(response.hits[5].recipe.ingredientLines[10]));
-            $("#recipe-item12").text(JSON.stringify(response.hits[5].recipe.ingredientLines[11]));
-            $("#recipe-item13").text(JSON.stringify(response.hits[5].recipe.ingredientLines[12]));
-            $("#recipe-item14").text(JSON.stringify(response.hits[5].recipe.ingredientLines[13]));
-            $("#recipe-item15").text(JSON.stringify(response.hits[5].recipe.ingredientLines[14]));
-            $("#recipe-item16").text(JSON.stringify(response.hits[5].recipe.ingredientLines[15]));
-            $("#recipe-item17").text(JSON.stringify(response.hits[5].recipe.ingredientLines[16]));
-            $("#recipe-item18").text(JSON.stringify(response.hits[5].recipe.ingredientLines[17]));
-            $("#recipe-item19").text(JSON.stringify(response.hits[5].recipe.ingredientLines[18]));
-            $("#recipe-item20").text(JSON.stringify(response.hits[5].recipe.ingredientLines[19]));
+            $("#recipe-item1").text(response.hits[5].recipe.ingredientLines[0]);
+            $("#recipe-item2").text(response.hits[5].recipe.ingredientLines[1]);
+            $("#recipe-item3").text(response.hits[5].recipe.ingredientLines[2]);
+            $("#recipe-item4").text(response.hits[5].recipe.ingredientLines[3]);
+            $("#recipe-item5").text(response.hits[5].recipe.ingredientLines[4]);
+            $("#recipe-item6").text(response.hits[5].recipe.ingredientLines[5]);
+            $("#recipe-item7").text(response.hits[5].recipe.ingredientLines[6]);
+            $("#recipe-item8").text(response.hits[5].recipe.ingredientLines[7]);
+            $("#recipe-item9").text(response.hits[5].recipe.ingredientLines[8]);
+            $("#recipe-item10").text(response.hits[5].recipe.ingredientLines[9]);
+            $("#recipe-item11").text(response.hits[5].recipe.ingredientLines[10]);
+            $("#recipe-item12").text(response.hits[5].recipe.ingredientLines[11]);
+            $("#recipe-item13").text(response.hits[5].recipe.ingredientLines[12]);
+            $("#recipe-item14").text(response.hits[5].recipe.ingredientLines[13]);
+            $("#recipe-item15").text(response.hits[5].recipe.ingredientLines[14]);
+            $("#recipe-item16").text(response.hits[5].recipe.ingredientLines[15]);
+            $("#recipe-item17").text(response.hits[5].recipe.ingredientLines[16]);
+            $("#recipe-item18").text(response.hits[5].recipe.ingredientLines[17]);
+            $("#recipe-item19").text(response.hits[5].recipe.ingredientLines[18]);
+            $("#recipe-item20").text(response.hits[5].recipe.ingredientLines[19]);
 
         });
         

@@ -1,6 +1,9 @@
 $(document).ready(function() {
     var favoritesArr = JSON.parse(localStorage.getItem("dish"));
-
+    if( !favoritesArr ){
+        favoritesArr = [];
+    }
+    
     $("#search").keyup(function(e){     
         var str = $.trim( $(this).val() );
         if( str != "" ) {
